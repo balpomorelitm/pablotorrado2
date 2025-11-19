@@ -1,4 +1,3 @@
-
 export interface LocalizedString {
   en: string;
   es: string;
@@ -6,7 +5,7 @@ export interface LocalizedString {
 
 export interface Project {
   id: string;
-  title: string; // Titles usually don't change, but description does
+  title: string;
   description: LocalizedString;
   technologies: string[];
   imageUrl: string;
@@ -22,7 +21,6 @@ export interface Publication {
   year: string;
   downloadUrl?: string;
   type: 'Conference' | 'Workshop' | 'Article' | 'Book';
-  // New fields for Books
   imageUrl?: string;
   publisherUrl?: string;
   amazonUrl?: string;
@@ -48,17 +46,5 @@ export interface Experience {
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: string; // Lucide icon name
-}
-
-export enum Sender {
-  USER = 'user',
-  AI = 'ai'
-}
-
-export interface ChatMessage {
-  id: string;
-  text: string;
-  sender: Sender;
-  timestamp: Date;
+  icon: string;
 }
