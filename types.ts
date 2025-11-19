@@ -20,6 +20,7 @@ export interface Publication {
   event: LocalizedString;
   year: string;
   downloadUrl?: string;
+  downloadUrls?: Partial<Record<'en' | 'es', string>>;
   type: 'Conference' | 'Workshop' | 'Article' | 'Book';
   // New fields for Books
   imageUrl?: string;
@@ -30,7 +31,7 @@ export interface Publication {
 
 export interface SkillCategory {
   name: LocalizedString;
-  skills: string[];
+  skills: LocalizedString[];
 }
 
 export interface Experience {
