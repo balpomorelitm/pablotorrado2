@@ -57,9 +57,6 @@ const Contact: React.FC = () => {
           <p className="text-slate-500 dark:text-gray-500 text-sm">
             © {new Date().getFullYear()} {PROFILE_NAME}. {language === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>
-          <p className="text-slate-600 dark:text-gray-600 text-sm">
-            {language === 'en' ? 'Designed with React & Gemini' : 'Diseñado con React y Gemini'}
-          </p>
         </div>
       </div>
     </footer>
