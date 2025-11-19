@@ -4,8 +4,8 @@ import { Project, SkillCategory, Experience, SocialLink, Publication, LocalizedS
 // Personal Info
 export const PROFILE_NAME = "Pablo Torrado";
 export const PROFILE_ROLE: LocalizedString = {
-  en: "Lecturer & EdTech Developer",
-  es: "Profesor de ELE & Desarrollador EdTech"
+  en: "ELE Professor & Toolmaker",
+  es: "Profesor de ELE y programador de herramientas"
 };
 
 export const PROFILE_BIO: LocalizedString = {
@@ -149,7 +149,7 @@ export const PUBLICATIONS: Publication[] = [
     },
     year: "2017",
     type: "Book",
-    imageUrl: "https://enclave-ele.net/wp-content/uploads/2020/06/Genial-A1_alumno-500x500.jpg",
+    imageUrl: "/imagenes/genial.jpg",
     publisherUrl: "https://enclave-ele.net/product/genial-a1-curso-de-espanol/",
     amazonUrl: "https://www.amazon.com/%C2%A1Genial-A1-espa%C3%B1ol-edici%C3%B3n-Spanish/dp/8418731176",
     description: {

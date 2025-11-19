@@ -33,11 +33,11 @@ const Projects: React.FC = () => {
           {PROJECTS.map((project) => (
             <div key={project.id} className="group bg-white dark:bg-card rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-2xl dark:shadow-xl dark:hover:shadow-primary/10 hover:border-primary/50 transition-all duration-300 flex flex-col">
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative aspect-[4/3] md:aspect-square overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/10 dark:bg-darker/50 group-hover:bg-transparent transition-colors z-10"></div>
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title} 
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-darker/80 backdrop-blur p-2 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">

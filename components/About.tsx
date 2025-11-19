@@ -7,8 +7,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 const About: React.FC = () => {
   const { t, language } = useLanguage();
 
-  // Placeholder images for the instagram grid since we don't have local assets
-  const instaImages = Array(8).fill(null).map((_, i) => `https://images.unsplash.com/photo-${1580000000000 + i}?w=300&h=300&fit=crop`);
+  // Local placeholder images for the Instagram grid stored in /public/imagenes
+  const instaImages = Array.from({ length: 12 }, (_, i) => `/imagenes/insta_placeholder_${i}.webp`);
 
   return (
     <section id="hobbies" className="py-24 bg-white dark:bg-dark relative overflow-hidden transition-colors duration-300">
@@ -75,15 +75,11 @@ const About: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 opacity-100 dark:opacity-80 dark:hover:opacity-100 transition-opacity duration-500">
             {instaImages.map((img, idx) => (
               <div key={idx} className={`rounded-lg overflow-hidden aspect-square hover:scale-105 transition-transform duration-300 border border-slate-200 dark:border-slate-800 shadow-sm ${idx % 3 === 0 ? 'col-span-2 row-span-2' : ''}`}>
-                 <img 
-                   src={`https://source.unsplash.com/random/400x400?nature,bird,macro&sig=${idx}`} 
-                   alt="Photography sample" 
-                   className="w-full h-full object-cover"
-                   onError={(e) => {
-                     // Fallback if unsplash source is flaky
-                     (e.target as HTMLImageElement).src = `https://via.placeholder.com/400/1e293b/6366f1?text=Photo+${idx+1}`
-                   }}
-                 />
+                <img
+                  src={img}
+                  alt={`Instagram placeholder ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>

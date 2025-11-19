@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left z-10 order-2 md:order-1 mt-8 md:mt-0">
           <div className="inline-block px-3 py-1 mb-4 text-sm font-semibold tracking-wider text-primary uppercase bg-indigo-50 dark:bg-primary/10 rounded-full border border-indigo-100 dark:border-primary/20">
-            {language === 'en' ? 'Academic & Developer' : 'Académico y Desarrollador'}
+            {language === 'en' ? 'Researcher & Professor' : 'Investigador y profesor'}
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
             {language === 'en' ? "Hi, I'm" : "Hola, soy"} <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{PROFILE_NAME}</span>
@@ -53,12 +53,12 @@ const Hero: React.FC = () => {
 
         {/* Image/Avatar Area */}
         <div className="flex-1 flex justify-center md:justify-end relative order-1 md:order-2">
-           <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-20 dark:opacity-50"></div>
-              <img 
-                src="/imagenes/pixelpic.webp" 
-                alt={PROFILE_NAME} 
-                className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl bg-slate-100 dark:bg-slate-800"
+           <div className="relative w-64 h-80 md:w-80 md:h-[28rem]">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-[2.5rem] blur-2xl opacity-20 dark:opacity-50"></div>
+              <img
+                src="https://pablotorrado.site/imagenes/pixelpic.webp"
+                alt={PROFILE_NAME}
+                className="relative w-full h-full object-cover rounded-[2rem] border-4 border-white dark:border-slate-800 shadow-2xl bg-slate-100 dark:bg-slate-800"
               />
            </div>
         </div>
