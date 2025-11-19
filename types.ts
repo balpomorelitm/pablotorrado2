@@ -21,6 +21,7 @@ export interface Publication {
   year: string;
   downloadUrl?: string;
   downloadUrls?: Partial<Record<'en' | 'es', string>>;
+  languages?: ('en' | 'es')[];
   type: 'Conference' | 'Workshop' | 'Article' | 'Book';
   // New fields for Books
   imageUrl?: string;

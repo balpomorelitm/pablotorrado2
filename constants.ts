@@ -170,7 +170,8 @@ export const PUBLICATIONS: Publication[] = [
     downloadUrls: {
       en: "/documentos/The 'Teacher  Coder'.pdf",
       es: "/documentos/El profe programador.pdf"
-    }
+    },
+    languages: ['es', 'en']
   },
   {
     id: 'beijing2025',
@@ -194,7 +195,11 @@ export const PUBLICATIONS: Publication[] = [
     },
     year: "2023",
     type: "Workshop",
-    downloadUrl: "/documentos/Jornadas HKU 2023 Pablo Torrado.zip"
+    downloadUrls: {
+      es: "/documentos/Jornadas HKU 2023 Pablo Torrado.zip",
+      en: "/documentos/2024 - From a Course Glossary to Anki Flashcards with the help of AI.pdf"
+    },
+    languages: ['es', 'en']
   },
   {
     id: 'bkk2020',
