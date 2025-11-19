@@ -4,7 +4,7 @@ import { Project, SkillCategory, Experience, SocialLink, Publication, LocalizedS
 // Personal Info
 export const PROFILE_NAME = "Pablo Torrado";
 export const PROFILE_ROLE: LocalizedString = {
-  en: "ELE Professor & Toolmaker",
+  en: "ELE Lecturer & Toolmaker",
   es: "Profesor de ELE y programador de herramientas"
 };
 
@@ -158,6 +158,21 @@ export const PUBLICATIONS: Publication[] = [
     }
   },
   {
+    id: 'teacher-coder',
+    title: "The Teacher Coder",
+    spanishTitle: "El profe programador",
+    event: {
+      en: "Independent talk on combining programming and ELE teaching",
+      es: "Charla independiente sobre combinar programación y la enseñanza de ELE"
+    },
+    year: "2024",
+    type: "Conference",
+    downloadUrls: {
+      en: "/documentos/The 'Teacher  Coder'.pdf",
+      es: "/documentos/El profe programador.pdf"
+    }
+  },
+  {
     id: 'beijing2025',
     title: "Level Up Your Language Lessons",
     spanishTitle: "¡A jugar se aprende! Juegos de mesa en español en eventos y en clase",
@@ -210,15 +225,34 @@ export const PUBLICATIONS: Publication[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     name: { en: "Education & Linguistics", es: "Educación y Lingüística" },
-    skills: ["ELE Pedagogy", "Curriculum Design", "Gamification", "Anki & Spaced Repetition", "Vocabulary Acquisition"]
+    skills: [
+      { en: "ELE Pedagogy", es: "Pedagogía de ELE" },
+      { en: "Curriculum Design", es: "Diseño curricular" },
+      { en: "Gamification", es: "Gamificación" },
+      { en: "Anki & Spaced Repetition", es: "Anki y repetición espaciada" },
+      { en: "Vocabulary Acquisition", es: "Adquisición de vocabulario" }
+    ]
   },
   {
     name: { en: "Web Development", es: "Desarrollo Web" },
-    skills: ["HTML5/CSS3", "JavaScript/TypeScript", "React", "Tailwind CSS", "Responsive Design"]
+    skills: [
+      { en: "HTML5/CSS3", es: "HTML5/CSS3" },
+      { en: "JavaScript/TypeScript", es: "JavaScript/TypeScript" },
+      { en: "React", es: "React" },
+      { en: "Tailwind CSS", es: "Tailwind CSS" },
+      { en: "Responsive Design", es: "Diseño adaptable" }
+    ]
   },
   {
     name: { en: "Tools & Platforms", es: "Herramientas y Plataformas" },
-    skills: ["Moodle", "Canvas", "Zoom", "Audio/Video Editing", "Adobe Creative Suite", "Git"]
+    skills: [
+      { en: "Moodle", es: "Moodle" },
+      { en: "Canvas", es: "Canvas" },
+      { en: "Zoom", es: "Zoom" },
+      { en: "Audio/Video Editing", es: "Edición de audio y video" },
+      { en: "Adobe Creative Suite", es: "Adobe Creative Suite" },
+      { en: "Git", es: "Git" }
+    ]
   }
 ];
 

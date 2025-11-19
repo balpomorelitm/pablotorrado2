@@ -1,8 +1,19 @@
 
 import React from 'react';
-import { Download, Mic2, BookOpen, ShoppingCart, ExternalLink } from 'lucide-react';
+import { Download, Mic2, BookOpen, ShoppingCart } from 'lucide-react';
 import { PUBLICATIONS } from '../constants';
 import { useLanguage } from '../contexts/LanguageContext';
+
+const downloadLabelMap = {
+  en: {
+    en: 'Download (English)',
+    es: 'Download (Spanish)'
+  },
+  es: {
+    en: 'Descargar (Inglés)',
+    es: 'Descargar (Español)'
+  }
+};
 
 const Publications: React.FC = () => {
   const { t, language } = useLanguage();
@@ -139,17 +150,34 @@ const Publications: React.FC = () => {
                   </div>
                 </div>
                 
-                <div>
-                   {pub.downloadUrl ? (
-                     <a href={pub.downloadUrl} className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white dark:hover:bg-primary text-slate-700 dark:text-white rounded-lg transition-colors text-sm font-medium">
-                       <Download size={16} />
-                       {language === 'en' ? 'Access Material' : 'Descargar'}
-                     </a>
-                   ) : (
-                     <span className="text-xs text-gray-400 dark:text-gray-600 italic">
-                        {language === 'en' ? 'No download available' : 'Sin descarga'}
-                     </span>
-                   )}
+                <div className="flex flex-col gap-2">
+                  {pub.downloadUrls ? (
+                    <div className="flex flex-wrap gap-2">
+                      {( ['es', 'en'] as const).map((langCode) => {
+                        const url = pub.downloadUrls?.[langCode];
+                        if (!url) return null;
+                        return (
+                          <a
+                            key={langCode}
+                            href={url}
+                            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white dark:hover:bg-primary text-slate-700 dark:text-white rounded-lg transition-colors text-sm font-medium"
+                          >
+                            <Download size={16} />
+                            {downloadLabelMap[language][langCode]}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  ) : pub.downloadUrl ? (
+                    <a href={pub.downloadUrl} className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white dark:hover:bg-primary text-slate-700 dark:text-white rounded-lg transition-colors text-sm font-medium">
+                      <Download size={16} />
+                      {language === 'en' ? 'Access Material' : 'Descargar'}
+                    </a>
+                  ) : (
+                    <span className="text-xs text-gray-400 dark:text-gray-600 italic">
+                      {language === 'en' ? 'No download available' : 'Sin descarga'}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

@@ -28,9 +28,9 @@ const Skills: React.FC = () => {
               
               <div className="space-y-3">
                 {category.skills.map((skill) => (
-                  <div key={skill} className="flex items-center gap-3 text-slate-600 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-gray-200 transition-colors">
+                  <div key={skill.en} className="flex items-center gap-3 text-slate-600 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-gray-200 transition-colors">
                     <CheckCircle2 size={18} className="text-primary flex-shrink-0" />
-                    <span className="text-base">{skill}</span>
+                    <span className="text-base">{t(skill)}</span>
                   </div>
                 ))}
               </div>
